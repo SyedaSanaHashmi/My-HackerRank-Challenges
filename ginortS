@@ -1,0 +1,19 @@
+#ginortS
+#https://www.hackerrank.com/challenges/ginorts/problem
+S=input()
+finalList=[[],[],[],[]]
+for x in S:
+    if x.islower():
+        finalList[0].append(x)
+    elif x.isupper():
+        finalList[1].append(x)
+    elif int(x)%2!=0:
+        finalList[2].append(x)
+    else:
+        finalList[3].append(x)
+
+for i in range(len(finalList)):
+    finalList[i]=sorted(finalList[i])
+    finalList[i]=''.join(finalList[i])
+
+print (''.join(finalList))
